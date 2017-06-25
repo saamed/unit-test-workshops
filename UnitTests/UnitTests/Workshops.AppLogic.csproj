@@ -52,18 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InMemoryRepository.cs" />
-    <Compile Include="Contractor.cs" />
-    <Compile Include="ContractorInMemoryRepository.cs" />
-    <Compile Include="Entity.cs" />
+    <Compile Include="Repositories\InMemoryRepository.cs" />
+    <Compile Include="Entities\Contractor.cs" />
+    <Compile Include="Repositories\ContractorInMemoryRepository.cs" />
+    <Compile Include="Entities\Entity.cs" />
     <Compile Include="IAddInvoiceCommandService.cs" />
-    <Compile Include="IContractorRepository.cs" />
+    <Compile Include="Repositories\IContractorRepository.cs" />
     <Compile Include="IInvoiceQueryService.cs" />
-    <Compile Include="IInvoiceRepository.cs" />
-    <Compile Include="Invoice.cs" />
-    <Compile Include="InvoiceContractor.cs" />
-    <Compile Include="InvoiceInMemoryRepository.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="Repositories\IInvoiceRepository.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceContractor.cs" />
+    <Compile Include="Repositories\InvoiceInMemoryRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VatValueCalculator.cs" />
   </ItemGroup>
