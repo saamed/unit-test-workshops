@@ -1,10 +1,14 @@
-﻿namespace Workshops.Applogic
+﻿using System;
+
+namespace Workshops.Applogic
 {
   public static class VatValueCalculator
   {
-    public static decimal CalculateGrossValue(decimal netValue)
+    public static decimal CalculateGrossValue(decimal netValue, decimal vatRate)
     {
-      return netValue * 1.23M;
+      var result = Math.Round(netValue * (1 + vatRate) * 100, 2, MidpointRounding.AwayFromZero);
+
+      return result;
     }
   }
 }

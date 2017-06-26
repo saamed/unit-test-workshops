@@ -7,15 +7,21 @@ namespace Workshops.Tests.NUnit
   public class VatValueCalculatorTests
   {
     [Test]
-    public void should_calculate_proper_value()
+    public void calculates_proper_value_for_23_percent()
     {
-      const decimal netValue = 15;
-
       var expectedValue = 18.45M;
+      const decimal vatRate = 0.23M;
 
-      var calculatedValue = VatValueCalculator.CalculateGrossValue(netValue);
+      // Arrange
+      decimal netValue = 15;
 
-      Assert.That(expectedValue, Is.EqualTo(calculatedValue));
+
+      // Act
+      var calculatedValue = VatValueCalculator.CalculateGrossValue(netValue, vatRate);
+
+
+      // Assert
+      Assert.That(expectedValue, Is.Not.EqualTo(calculatedValue));
     }
   }
 }

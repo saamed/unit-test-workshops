@@ -7,7 +7,7 @@ namespace Workshops.AppLogic.Repositories
   {
     IEnumerable<T> GetAll();
     long Add(T entity);
-    T Update(T entity);
+    T AddOrUpdate(T entity);
     void Delete(long id);
   }
 }

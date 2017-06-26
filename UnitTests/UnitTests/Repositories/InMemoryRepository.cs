@@ -31,7 +31,7 @@ namespace Workshops.AppLogic.Repositories
       return Repository.ToArray();
     }
 
-    public T Update(T entity)
+    public T AddOrUpdate(T entity)
     {
       var savedEntity = Repository.FirstOrDefault(x => x.Id == entity.Id);
 

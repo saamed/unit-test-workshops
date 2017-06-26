@@ -52,24 +52,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContractorService.cs" />
+    <Compile Include="Entities\InvoicePosition.cs" />
+    <Compile Include="IInvoiceService.cs" />
+    <Compile Include="Repositories\IInvoiceContractorRepository.cs" />
+    <Compile Include="Repositories\InvoiceContractorInMemoryRepository.cs" />
+    <Compile Include="ServiceExceptions\InvoiceGrossValueMustBePositiveException.cs" />
+    <Compile Include="ServiceExceptions\InvoiceMustHaveContractorException.cs" />
+    <Compile Include="ServiceExceptions\InvoiceMustHavePositionsException.cs" />
+    <Compile Include="ServiceExceptions\InvoiceNetValueMustBePositiveException.cs" />
+    <Compile Include="InvoiceService.cs" />
+    <Compile Include="ServiceExceptions\MissingInvoiceNumberException.cs" />
+    <Compile Include="ServiceExceptions\MissingPositionNameException.cs" />
+    <Compile Include="ServiceExceptions\PositionGrossValueMustBePositiveException.cs" />
+    <Compile Include="ServiceExceptions\PositionNetValueMustBePositiveException.cs" />
     <Compile Include="Repositories\InMemoryRepository.cs" />
     <Compile Include="Entities\Contractor.cs" />
     <Compile Include="Repositories\ContractorInMemoryRepository.cs" />
     <Compile Include="Entities\Entity.cs" />
-    <Compile Include="IAddInvoiceCommandService.cs" />
+    <Compile Include="IContractorService.cs" />
     <Compile Include="Repositories\IContractorRepository.cs" />
-    <Compile Include="IInvoiceQueryService.cs" />
     <Compile Include="Repositories\IInvoiceRepository.cs" />
     <Compile Include="Entities\Invoice.cs" />
     <Compile Include="Entities\InvoiceContractor.cs" />
     <Compile Include="Repositories\InvoiceInMemoryRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResult.cs" />
+    <Compile Include="Validators\Exceptions\IncorrectCharsException.cs" />
+    <Compile Include="Validators\NipValidator.cs" />
+    <Compile Include="Validators\Exceptions\NotValidException.cs" />
+    <Compile Include="Validators\RegonValidator.cs" />
+    <Compile Include="Validators\Exceptions\WrongLengthException.cs" />
     <Compile Include="VatValueCalculator.cs" />
+    <Compile Include="ServiceExceptions\WrongPositionGrossValueException.cs" />
+    <Compile Include="ServiceExceptions\WrongVatRateException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
