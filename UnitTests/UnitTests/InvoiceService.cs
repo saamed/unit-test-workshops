@@ -7,6 +7,8 @@ namespace Workshops.Applogic
 {
   public class InvoiceService : IInvoiceService
   {
+    private const bool ShouldValidate = true;
+
     private readonly IInvoiceRepository _invoiceRepository;
 
     public InvoiceService(IInvoiceRepository invoiceRepository)
@@ -72,6 +74,9 @@ namespace Workshops.Applogic
 
     protected void ValidateInvoice(Invoice invoice)
     {
+      if (!ShouldValidate)
+        return;
+
       if (string.IsNullOrWhiteSpace(invoice.InvoiceNumber))
       {
         throw new MissingInvoiceNumberException();

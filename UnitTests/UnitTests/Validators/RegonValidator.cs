@@ -1,4 +1,5 @@
 using System.Linq;
+using Workshops.AppLogic.Validators.Exceptions;
 
 namespace Workshops.AppLogic.Validators
 {

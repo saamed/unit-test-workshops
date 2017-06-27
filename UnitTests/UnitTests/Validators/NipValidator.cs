@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Workshops.AppLogic.Validators.Exceptions;
 
 namespace Workshops.AppLogic.Validators
 {
@@ -18,7 +19,7 @@ namespace Workshops.AppLogic.Validators
 
       int sum = nip.Zip(weights, (digit, weight) => (digit - '0') * weight).Sum();
 
-      if (sum % 10 != nip[9] - '0')
+      if (sum % 11 != nip[9] - '0')
       {
         throw new NotValidException(nip);
       }

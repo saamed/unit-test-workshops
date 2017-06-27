@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Workshops.AppLogic.Validators
+namespace Workshops.AppLogic.Validators.Exceptions
 {
   public class IncorrectCharsException : Exception
   {

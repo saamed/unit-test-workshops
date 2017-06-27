@@ -24,4 +24,17 @@ namespace Workshops.Tests.NUnit
       Assert.That(expectedValue, Is.Not.EqualTo(calculatedValue));
     }
   }
+
+  [TestFixture]
+  public class Tests
+  {
+    [Test]
+    public void MyFirstTest()
+    {
+      double a = 5;
+      double b = 30;
+
+      Assert.AreEqual(b / a, 6);
+    }
+  }
 }

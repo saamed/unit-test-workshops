@@ -8,6 +8,8 @@ namespace Workshops.Applogic
 {
   public class ContractorService : IContractorService
   {
+    private const bool ShouldValidate = true;
+
     private readonly IContractorRepository _contractorRepository;
 
     public ContractorService(IContractorRepository contractorRepository)
@@ -67,6 +69,9 @@ namespace Workshops.Applogic
 
     protected void Validate(Contractor contractor)
     {
+      if (!ShouldValidate)
+        return;
+
       NipValidator.Validate(contractor.NIP);
       RegonValidator.Validate(contractor.REGON);
 
